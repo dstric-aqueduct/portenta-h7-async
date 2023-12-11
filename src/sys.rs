@@ -82,7 +82,9 @@ impl Clk<Reset> {
     pub fn enable_ext_clock(self) -> Clk<Reset> {
         let rcc = pac::RCC;
         // Enable GPIOH clock
-        rcc.ahb4enr().modify(|w| w.set_gpiohen(true));
+        rcc.ahb4enr().modify(|w| {
+            w.set_gpiohen(true);
+        });
 
         // Enable oscilator via push pulled GPIOH_1 output
         let gpioh = pac::GPIOH;

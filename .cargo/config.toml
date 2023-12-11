@@ -7,9 +7,16 @@ oe = "objcopy --example"
 blinky = "be blinky"
 blinky-probe = "ee blinky"
 blinky-bin = "oe blinky --release -- -O binary target/thumbv7em-none-eabihf/release/examples/blinky.bin"
+
 serial = "be serial"
 serial-probe = "ee serial"
 serial-bin = "oe serial --release -- -O binary target/thumbv7em-none-eabihf/release/examples/serial.bin"
+
+usb-serial = "be usb_serial"
+usb-serial-bin = "oe usb_serial --release -- -O binary target/thumbv7em-none-eabihf/release/examples/usb_serial.bin"
+
+eth = "be eth"
+eth-bin = "oe eth --release -- -O binary target/thumbv7em-none-eabihf/release/examples/eth.bin"
 
 [build]
 target = "thumbv7em-none-eabihf" # Cortex-M4F and Cortex-M7F (with FPU)
